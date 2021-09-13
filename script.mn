@@ -1,0 +1,242 @@
+{
+    "application": {
+        "dpctl": "",
+        "ipBase": "172.18.7.0/27",
+        "netflow": {
+            "nflowAddId": "0",
+            "nflowTarget": "",
+            "nflowTimeout": "600"
+        },
+        "openFlowVersions": {
+            "ovsOf10": "1",
+            "ovsOf11": "0",
+            "ovsOf12": "0",
+            "ovsOf13": "0"
+        },
+        "sflow": {
+            "sflowHeader": "128",
+            "sflowPolling": "30",
+            "sflowSampling": "400",
+            "sflowTarget": ""
+        },
+        "startCLI": "1",
+        "switchType": "ovs",
+        "terminalType": "xterm"
+    },
+    "controllers": [],
+    "hosts": [
+        {
+            "number": "5",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h5",
+                "ip": "172.18.7.16",
+                "nodeNum": 5,
+                "sched": "host"
+            },
+            "x": "75.0",
+            "y": "162.0"
+        },
+        {
+            "number": "6",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h6",
+                "ip": "172.18.7.15",
+                "nodeNum": 6,
+                "sched": "host"
+            },
+            "x": "602.0",
+            "y": "163.0"
+        },
+        {
+            "number": "4",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h4",
+                "ip": "172.18.7.14",
+                "nodeNum": 4,
+                "sched": "host"
+            },
+            "x": "535.0",
+            "y": "344.0"
+        },
+        {
+            "number": "1",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h1",
+                "ip": "172.18.7.10",
+                "nodeNum": 1,
+                "sched": "host"
+            },
+            "x": "131.0",
+            "y": "331.0"
+        },
+        {
+            "number": "3",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h3",
+                "ip": "172.18.7.13",
+                "nodeNum": 3,
+                "sched": "host"
+            },
+            "x": "402.0",
+            "y": "336.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "defaultRoute": "172.18.7.1",
+                "hostname": "h2",
+                "ip": "172.18.7.11",
+                "nodeNum": 2,
+                "sched": "host"
+            },
+            "x": "235.0",
+            "y": "334.0"
+        }
+    ],
+    "links": [
+        {
+            "dest": "s1",
+            "opts": {},
+            "src": "h1"
+        },
+        {
+            "dest": "s1",
+            "opts": {},
+            "src": "h2"
+        },
+        {
+            "dest": "s2",
+            "opts": {},
+            "src": "h5"
+        },
+        {
+            "dest": "s2",
+            "opts": {},
+            "src": "s1"
+        },
+        {
+            "dest": "s5",
+            "opts": {},
+            "src": "s2"
+        },
+        {
+            "dest": "r7",
+            "opts": {},
+            "src": "s5"
+        },
+        {
+            "dest": "s6",
+            "opts": {},
+            "src": "r7"
+        },
+        {
+            "dest": "s4",
+            "opts": {},
+            "src": "s6"
+        },
+        {
+            "dest": "s3",
+            "opts": {},
+            "src": "s4"
+        },
+        {
+            "dest": "h3",
+            "opts": {},
+            "src": "s3"
+        },
+        {
+            "dest": "h4",
+            "opts": {},
+            "src": "s3"
+        },
+        {
+            "dest": "h6",
+            "opts": {},
+            "src": "s4"
+        }
+    ],
+    "switches": [
+        {
+            "number": "1",
+            "opts": {
+                "controllers": [],
+                "hostname": "s1",
+                "nodeNum": 1,
+                "switchType": "legacySwitch"
+            },
+            "x": "164.0",
+            "y": "223.0"
+        },
+        {
+            "number": "3",
+            "opts": {
+                "controllers": [],
+                "hostname": "s3",
+                "nodeNum": 3,
+                "switchType": "legacySwitch"
+            },
+            "x": "468.0",
+            "y": "258.0"
+        },
+        {
+            "number": "7",
+            "opts": {
+                "hostname": "r7",
+                "nodeNum": 7,
+                "switchType": "legacyRouter"
+            },
+            "x": "286.0",
+            "y": "57.0"
+        },
+        {
+            "number": "4",
+            "opts": {
+                "controllers": [],
+                "hostname": "s4",
+                "nodeNum": 4,
+                "switchType": "legacySwitch"
+            },
+            "x": "457.0",
+            "y": "169.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "controllers": [],
+                "hostname": "s2",
+                "nodeNum": 2,
+                "switchType": "legacySwitch"
+            },
+            "x": "155.0",
+            "y": "147.0"
+        },
+        {
+            "number": "6",
+            "opts": {
+                "controllers": [],
+                "hostname": "s6",
+                "nodeNum": 6,
+                "switchType": "legacySwitch"
+            },
+            "x": "430.0",
+            "y": "75.0"
+        },
+        {
+            "number": "5",
+            "opts": {
+                "controllers": [],
+                "hostname": "s5",
+                "nodeNum": 5,
+                "switchType": "legacySwitch"
+            },
+            "x": "153.0",
+            "y": "64.0"
+        }
+    ],
+    "version": "2"
+}
